@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-hk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO's Booth at the HK Book Fair 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Enable positioning for the button */
+        }
+        h1 {
+            text-align: center;
+            background: #2595f7;
+            margin-top: 70px; /* Move the header down */
+        }
+        .redirect-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #5bc0de;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            max-width: 150px; /* Limit the button width */
+        }
+        .redirect-button:hover {
+            background: #31b0d5;
+        }
+        .description {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background: #dff0d8;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #5bc0de;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #31b0d5;
+        }
+        .time-schedule {
+            margin-top: 30px;
+            padding: 10px;
+            background: #e6f7ff;
+            border: 1px solid #b3e0ff;
+            border-radius: 5px;
+        }
+        .panel-gallery {
+            display: none;
+            margin-top: 20px;
+        }
+        .panel-gallery img {
+            max-width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        audio {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="redirect-button" onclick="window.location.href='English.html'">English</button>
+        <h1>Hong Kong Book Fair</h1>
+        <div class="description">
+            <p>1. 參加者答對5條題目可遊玩電子遊戲一次!!!!!!<br>
+            <p>2. 本問卷不會收集個人電子郵件地址<br>
+        </div>
+        <figure>
+            <img src="Figures_1.png" alt="Description of Image" style="max-width: 100%; margin: 0 auto; display: block;">
+        </figure>
+        <form id="quizForm">
+            <div class="question">
+                <label>Q1. 以下哪些是土力工程處減低山泥傾瀉風險的主要策略?</label><br>
+                <input type="radio" name="q1" value="A"> A. 控制新發展所帶來的風險<br>
+                <input type="radio" name="q1" value="B"> B. 降低現有發展所面對的風險<br>
+                <input type="radio" name="q1" value="C"> C. 減少山泥傾瀉所造成的影響<br>
+                <input type="radio" name="q1" value="D"> D. 以上皆是<br>
+            </div>
+            <div class="question">
+                <label>Q2. 以下哪些是香港常用的天然山坡山泥傾瀉災害風險緩減措施?</label><br>
+                <input type="radio" name="q2" value="A"> A. 興建混凝土泥石壩和柔性防護網<br>
+                <input type="radio" name="q2" value="B"> B. 非法砍伐樹木<br>
+                <input type="radio" name="q2" value="C"> C. 興建混凝土泥石壩和鐵絲網<br>
+                <input type="radio" name="q2" value="D"> D. 以上皆非<br>
+            </div>
+            <div class="question">
+                <label>Q3. 業主應聘請什麼人進行斜坡的工程師維修檢查?</label><br>
+                <input type="radio" name="q3" value="A"> A. 非專業人士<br>
+                <input type="radio" name="q3" value="B"> B. 註冊結構工程師<br>
+                <input type="radio" name="q3" value="C"> C. 註冊專業工程師(岩土工程)<br>
+                <input type="radio" name="q3" value="D"> D. 註冊小型工程承建商<br>
+            </div>
+            <div class="question">
+                <label>Q4. 在安全篩選中有證據顯示有關私人斜坡有危險或可能變得危險，土力工程處會進行什麼行動?</label><br>
+                <input type="radio" name="q4" value="A"> A. 建議屋宇署向業主發出危險斜坡修葺令<br>
+                <input type="radio" name="q4" value="B"> B. 向私人業主發出維修勸喻信<br>
+                <input type="radio" name="q4" value="C"> C. 不進行任何行動<br>
+                <input type="radio" name="q4" value="D"> D. 以上皆非<br>
+            </div>
+            <div class="question">
+                <label>Q5. 在安全篩選中有證據顯示有關私人斜坡有危險或可能變得危險，土力工程處會進行什麼行動?</label><br>
+                <input type="radio" name="q5" value="A"> A. 建議屋宇署向業主發出危險斜坡修葺令<br>
+                <input type="radio" name="q5" value="B"> B. 向私人業主發出維修勸喻信<br>
+                <input type="radio" name="q5" value="C"> C. 不進行任何行動<br>
+                <input type="radio" name="q5" value="D"> D. 以上皆非<br>
+            </div>
+            <button type="button" onclick="calculateResults()">提交</button>
+        </form>
+        <div class="result" id="result">
+            <h2>成績</h2>
+            <p id="resultText"></p>
+            <p id="totalMarks"></p>
+        </div>
+        <div class="time-schedule" id="timeSchedule" style="display: none;">
+            <h2>街機遊戲時段</h2>
+            <p id="timeSlot"></p>
+        </div>
+        <!-- Button to read the panels -->
+        <button onclick="showPanels()">查閱展板</button>
+
+        <!-- Panel Gallery -->
+        <div class="panel-gallery" id="panelGallery">
+            <h2>Panels</h2>
+            <img src="Figures_2.png" alt="Panel 1">
+            <audio controls="">
+                <source src="Panel_1.mp3" type="audio/x-m4a">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="Figures_3.png" alt="Panel 2">
+            <audio controls="">
+                <source src="Panel_2.mp3" type="audio/x-m4a">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="Figures_4.png" alt="Panel 3">
+            <audio controls="">
+                <source src="ToBeUpdated.mp3" type="audio/x-m4a">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="Figures_5.png" alt="Panel 3">
+            <audio controls="">
+                <source src="ToBeUpdated.mp3" type="audio/x-m4a">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="Figures_6.png" alt="Panel 3">
+            <audio controls="">
+                <source src="ToBeUpdated.mp3" type="audio/x-m4a">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        let usedTimeSlots = [];
+        const timeSlots = [];
+        const participants = [];
+
+        // Generate time slots for the entire day starting from 00:00
+        for (let i = 0; i < 96; i++) { // 96 slots for 24 hours (15-minute intervals)
+            const time = new Date();
+            time.setHours(0);
+            time.setMinutes(i * 15);
+            timeSlots.push(time);
+        }
+
+        function calculateResults() {
+            const q1Answer = document.querySelector('input[name="q1"]:checked');
+            const q2Answer = document.querySelector('input[name="q2"]:checked');
+            const q3Answer = document.querySelector('input[name="q3"]:checked');
+            const q4Answer = document.querySelector('input[name="q4"]:checked');
+            const q5Answer = document.querySelector('input[name="q5"]:checked');
+            
+            // Check if all questions are answered
+            if (!q1Answer || !q2Answer || !q3Answer || !q4Answer || !q5Answer) {
+                alert("請確保回答所有問題！");
+                return; // Exit the function if not all questions are answered
+            }            
+
+            let score = 0;
+            let resultText = '';
+
+            const correctAnswers = {
+                q1: 'D',
+                q2: 'A',
+                q3: 'C',
+                q4: 'A',
+                q5: 'A'
+            };
+
+            if (q1Answer && q1Answer.value === correctAnswers.q1) {
+                score++;
+            }
+            if (q2Answer && q2Answer.value === correctAnswers.q2) {
+                score++;
+            }
+            if (q3Answer && q3Answer.value === correctAnswers.q3) {
+                score++;
+            }
+            if (q4Answer && q4Answer.value === correctAnswers.q4) {
+                score++;
+            }
+            if (q5Answer && q5Answer.value === correctAnswers.q5) {
+                score++;
+            }
+
+            resultText = `Q1: ${q1Answer ? q1Answer.value : '沒有答案'} -> ${correctAnswers.q1}<br>`;
+            resultText += `Q2: ${q2Answer ? q2Answer.value : '沒有答案'} -> ${correctAnswers.q2}<br>`;
+            resultText += `Q3: ${q3Answer ? q3Answer.value : '沒有答案'} -> ${correctAnswers.q3}<br>`;
+            resultText += `Q4: ${q4Answer ? q4Answer.value : '沒有答案'} -> ${correctAnswers.q4}<br>`;
+            resultText += `Q5: ${q4Answer ? q4Answer.value : '沒有答案'} -> ${correctAnswers.q5}<br>`;
+
+            document.getElementById('resultText').innerHTML = resultText;
+            document.getElementById('totalMarks').innerHTML = `總分: ${score}/5`;
+            document.getElementById('result').style.display = 'block';
+
+            // Record participant data
+            const participantId = participants.length + 1;
+            participants.push({
+                id: participantId,
+                totalCorrect: score,
+                q1Correct: q1Answer && q1Answer.value === correctAnswers.q1 ? 1 : 0,
+                q2Correct: q2Answer && q2Answer.value === correctAnswers.q2 ? 1 : 0,
+                q3Correct: q3Answer && q3Answer.value === correctAnswers.q3 ? 1 : 0,
+                q4Correct: q4Answer && q4Answer.value === correctAnswers.q4 ? 1 : 0,
+                q5Correct: q5Answer && q5Answer.value === correctAnswers.q5 ? 1 : 0,
+                timeSlot: ''
+            });
+
+            if (score === 5) {
+                showNextTimeSlot(participantId);
+            } else {
+                document.getElementById('timeSlot').textContent = "請嘗試再次回答";
+                document.getElementById('timeSchedule').style.display = 'block';
+            }
+        }
+
+        function showNextTimeSlot(participantId) {
+            const now = new Date();
+            const availableSlots = timeSlots.filter(slot => {
+                const formattedSlot = slot.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                return !usedTimeSlots.includes(formattedSlot) && slot > now;
+            });
+
+            if (availableSlots.length > 0) {
+                const nextSlot = availableSlots[0].toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                usedTimeSlots.push(nextSlot);
+
+                // Update the participant's time slot
+                participants[participantId - 1].timeSlot = nextSlot;
+                document.getElementById('timeSlot').textContent = nextSlot;
+                document.getElementById('timeSchedule').style.display = 'block';
+            } else {
+                document.getElementById('timeSlot').textContent = "No more available slots.";
+                document.getElementById('timeSchedule').style.display = 'block';
+            }
+        }
+
+        function showPanels() {
+            document.getElementById('panelGallery').style.display = 'block';
+        }
+    </script>
+
+
+</body></html>
