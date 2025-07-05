@@ -18,9 +18,27 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Enable positioning for the button */
         }
         h1 {
             text-align: center;
+            background: #2595f7;
+            margin-top: 70px; /* Move the header down */
+        }
+        .redirect-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #5bc0de;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            max-width: 150px; /* Limit the button width */
+        }
+        .redirect-button:hover {
+            background: #31b0d5;
         }
         .description {
             margin: 20px 0;
@@ -77,9 +95,10 @@
 </head>
 <body>
     <div class="container">
+        <button class="redirect-button" onclick="window.location.href='English.html'">English</button>
         <h1>Hong Kong Book Fair</h1>
         <div class="description">
-            <p>1. 參加者答對四條題目可遊玩電子遊戲一次!!!!!!<br>
+            <p>1. 參加者答對5條題目可遊玩電子遊戲一次!!!!!!<br>
             <p>2. 本問卷不會收集個人電子郵件地址<br>
         </div>
         <figure>
@@ -140,27 +159,27 @@
             <h2>Panels</h2>
             <img src="Figures_2.png" alt="Panel 1">
             <audio controls="">
-                <source src="Panel_1.m4a" type="audio/x-m4a">
+                <source src="Panel_1.mp3" type="audio/x-m4a">
                 Your browser does not support the audio element.
             </audio>
             <img src="Figures_3.png" alt="Panel 2">
             <audio controls="">
-                <source src="Panel_2.m4a" type="audio/x-m4a">
+                <source src="Panel_2.mp3" type="audio/x-m4a">
                 Your browser does not support the audio element.
             </audio>
             <img src="Figures_4.png" alt="Panel 3">
             <audio controls="">
-                <source src="ToBeUpdated.m4a" type="audio/x-m4a">
+                <source src="ToBeUpdated.mp3" type="audio/x-m4a">
                 Your browser does not support the audio element.
             </audio>
             <img src="Figures_5.png" alt="Panel 3">
             <audio controls="">
-                <source src="ToBeUpdated.m4a" type="audio/x-m4a">
+                <source src="ToBeUpdated.mp3" type="audio/x-m4a">
                 Your browser does not support the audio element.
             </audio>
             <img src="Figures_6.png" alt="Panel 3">
             <audio controls="">
-                <source src="ToBeUpdated.m4a" type="audio/x-m4a">
+                <source src="ToBeUpdated.mp3" type="audio/x-m4a">
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -185,6 +204,13 @@
             const q3Answer = document.querySelector('input[name="q3"]:checked');
             const q4Answer = document.querySelector('input[name="q4"]:checked');
             const q5Answer = document.querySelector('input[name="q5"]:checked');
+            
+            // Check if all questions are answered
+            if (!q1Answer || !q2Answer || !q3Answer || !q4Answer || !q5Answer) {
+                alert("請確保回答所有問題！");
+                return; // Exit the function if not all questions are answered
+            }            
+
             let score = 0;
             let resultText = '';
 
@@ -216,7 +242,7 @@
             resultText += `Q2: ${q2Answer ? q2Answer.value : '沒有答案'} -> ${correctAnswers.q2}<br>`;
             resultText += `Q3: ${q3Answer ? q3Answer.value : '沒有答案'} -> ${correctAnswers.q3}<br>`;
             resultText += `Q4: ${q4Answer ? q4Answer.value : '沒有答案'} -> ${correctAnswers.q4}<br>`;
-            resultText += `Q5: ${q4Answer ? q4Answer.value : '沒有答案'} -> ${correctAnswers.q4}<br>`;
+            resultText += `Q5: ${q4Answer ? q4Answer.value : '沒有答案'} -> ${correctAnswers.q5}<br>`;
 
             document.getElementById('resultText').innerHTML = resultText;
             document.getElementById('totalMarks').innerHTML = `總分: ${score}/5`;
@@ -235,7 +261,7 @@
                 timeSlot: ''
             });
 
-            if (score === 4) {
+            if (score === 5) {
                 showNextTimeSlot(participantId);
             } else {
                 document.getElementById('timeSlot').textContent = "請嘗試再次回答";
